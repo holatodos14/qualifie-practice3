@@ -6,11 +6,7 @@ const TipSelection = ({ selectedTip, customTip, onTipChange, onCustomTipChange }
     <ul>
       {[5, 10, 15, 25, 50].map(tp => (
         <li id={`percentage-${tp}`} key={tp}>
-          <button
-            type="button"
-            onClick={() => onTipChange('tip', tp)}
-            className={`percentage-button ${selectedTip === tp ? 'btn-active' : ''}`}
-            value={tp}
+          <button type="button" onClick={() => onTipChange('tip', tp)} className={`percentage-button ${selectedTip === tp ? 'btn-active' : ''}`} value={tp}
           >
             {tp}%
           </button>
